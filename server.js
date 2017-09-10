@@ -8,6 +8,22 @@ var firsttest = {
     </p>
     `
 };
+function template (data) {
+var content=data.content;
+var simple=`
+<html>
+    <head>
+        <title>Hello Webpage</title>
+    </head>
+    <body>
+    <p>
+        ${content}
+    </p>    
+    </body>
+</html>
+`;
+}
+
 
 var app = express();
 app.use(morgan('combined'));
