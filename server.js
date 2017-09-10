@@ -22,6 +22,7 @@ var simple=`
     </body>
 </html>
 `;
+return simple;
 }
 
 
@@ -29,7 +30,7 @@ var app = express();
 app.use(morgan('combined'));
 app.get('/')
 app.get('/sat1', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'firsttest.html'));
+    res.send(template(firsttest));
 });
 app.get('/sat2', function (req, res) {
     res.send('this is the article two');
