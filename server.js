@@ -35,6 +35,11 @@ app.get('/sat1', function (req, res) {
 app.get('/sat2', function (req, res) {
     res.send('this is the article two');
 });
+var counter=0;
+app.get('/counter', function (req, res) {
+    counter=counter+1;
+   res.send(counter.toString()); 
+});
 app.get('/sat3', function (req, res) {
     res.send('this is the article three');
 });
