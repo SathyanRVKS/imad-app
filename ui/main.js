@@ -4,5 +4,5 @@ trigger.onclick = trigg ();
 function trigg() {
   counter=counter+1;
   span=document.getElementById("count");
-  span=counter.toString();
+  span.HTML=counter.toString();
 }
