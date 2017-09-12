@@ -1,5 +1,5 @@
 var button = document.getElementById("si");
-var counter,span;
+var counter=0,span;
 button.onclick = trigg ();
 function trigg() {
   counter=counter+1;
