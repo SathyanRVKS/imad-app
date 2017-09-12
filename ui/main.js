@@ -11,7 +11,13 @@ button.onclick = function () {
               var span=document.getElementById("count");
               span.innerHTML=counter.toString();
           }
-      }  
+          else {
+          span.innerHTML= "inner Error";
+      }
+      }
+      else {
+          span.innerHTML= "outer Error";
+      }
     };
     request.open('GET','http://sathyanrvks.imad.hasura-app.io',true);
     request.send(null);
