@@ -37,7 +37,8 @@ app.get('/sat2', function (req, res) {
 });
 var counter=0;
 app.get('/counter', function (req, res) {
-    res.sendFile(path.join(__dirname,'ui','main.js')); 
+    counter=counter+1;
+   res.send(counter.toString()); 
 });
 app.get('/sat3', function (req, res) {
     res.send('this is the article three');
