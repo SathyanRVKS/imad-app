@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var crypto=require(crypto);
+
 var firsttest = {
     content:`
     <p>Hellalo this is my webpage to you...
@@ -54,17 +54,7 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-function hash(input, salt){
-    //this is aa inbuilt method to hash a string or input given
-    var hashed=crypto.pbkdf2Sync(input, salt, 10000 ,512, 'shaa512');
-    return hashed.toString('hex');
-}
 
-//this is for password hashing
-app.get('/hash/:input', function (req, res) {
-  var hashedpass=hash(req.params.input,'this is a test salt');
-  req.send(hashedpass);
-});
 
 
 app.get('/ui/madi.png', function (req, res) {
